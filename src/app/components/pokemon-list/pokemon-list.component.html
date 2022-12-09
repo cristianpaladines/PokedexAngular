@@ -1,0 +1,35 @@
+<section class="pokedex">
+    <div class="pokedexMargin">
+        <header>
+            <img id="logo" src="../../../assets/img/logo3.png" alt="logoHeader">
+            <!-- <h1>Pokedex</h1> -->
+            <div class="btn">
+                <input type="text" placeholder="Escribe el nombre o el numero">
+                <!-- <img id="pokeball" src="img/iconPokeball.png"> -->
+            </div>
+            <div class="interactivo">
+                <button id="pokeBoton">Buscar</button>
+            </div>
+        </header>
+        <div class="pokemon-grid">
+            <div class="box" *ngFor="let pokemon of pokemons | paginate: { itemsPerPage: 10, currentPage: page, totalItems: totalPokemons }">
+                <img src="https://projectpokemon.org/images/normal-sprite/{{pokemon.name}}.gif" alt="Pokemon">
+                <h3>{{ pokemon.name }}</h3>
+                <p>
+                    <b>Type:</b> {{ pokemon.types[0].type.name }}
+                </p>
+                <p>
+                    <b>Height:</b> {{ pokemon.height }}
+                </p>
+                <p>
+                    <b>Weight:</b> {{ pokemon.weight }}
+                </p>
+                <p>
+                    <b>Number:</b> {{ pokemon.id }}
+                </p>
+            </div>
+        </div>
+
+        <pagination-controls (pageChange)="page = $event; pokemons = []; getPokemons()"></pagination-controls>
+    </div>
+</section>

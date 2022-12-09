@@ -1,0 +1,82 @@
+.pokedex{
+    background-color: rgb(113, 113, 248);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    
+}
+
+.pokedexMargin{
+    background-color: aliceblue;
+    width: 330px;
+    height: 580px;
+    border-radius: 4%;
+}
+
+header{
+    padding: 20px 0px;
+    width: 330px;
+    text-align: center;
+    background-color: springgreen;
+    border-radius: 5% 5% 5% 5%;
+}
+
+header h1{
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 3px;
+}
+
+#logo{
+    width: 205px;
+    height: 68px;
+    padding: 5px 10px;
+}
+
+.btn{
+    padding: 5px 5px 15px 15px;
+}
+
+input{
+    position: relative;
+    padding: 0 15px;
+    width:250px;
+    height: 36px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #1FA2FF 0%, #12D8FA 50%, #A6FFCB 100%);
+}
+
+#pokeBoton{
+    position: absolute;
+    margin-top: -45px;
+    margin-left: 80px;
+}
+
+.pokemon-grid{
+    display: grid;
+    grid-gap: 16px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
+}
+
+.pokemon-grid .box{
+    background-color: #A6FFCB;
+    width: 100%;
+    height: 300px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+    display: grid;
+    text-align: center;
+}
+
+.pokemon-grid .box img{
+    max-width: 115px;
+    height: 110px;
+    display: block;
+    margin: 0 auto;
+}
+
+pagination-controls{
+    text-align: center;
+}
+
